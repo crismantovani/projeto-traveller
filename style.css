@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: "Noto Sans", sans-serif;
+  background-color: #f2f1ec;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  background-color: #f2f1ec;
+  height: auto;
+  padding: 20px;
+}
+
+.flex-container > div {
+  background: #fff;
+  border: 2px solid #365b6d;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.header .logo {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-align: center;
+  background-color: #f3f2ed;
+}
+
+.logo img {
+  max-width: 100%;
+  width: 200px;
+}
+
+textarea {
+  line-height: 150%;
+  padding: 10px;
+  height: 150px;
+  resize: none;
+  width: 100%;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2vw;
+}
+
+h2 {
+  font-size: 1vw;
+}
+
+span.req {
+  font-weight: 900;
+  color: #cc0000;
+}
+
+hr {
+  margin: 20px 0 20px 0;
+  width: 100%;
+}
+
+label {
+  display: block;
+  flex-direction: column;
+}
+
+/* INPUT DE ARQUIVOS  */
+input[type="file"] {
+  display: none;
+}
+.file {
+  background-color: #289dd2;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  margin: 0px;
+  padding: 20px 20px;
+  margin-bottom: 10px;
+}
+.file:hover {
+  opacity: 0.8;
+  transition: ease-in 0.4s;
+}
+
+/* INPUT ENVIAR */
+.enviar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+input[type="submit"] {
+  width: 80%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #7ac74f;
+  border-radius: 10px;
+  color: #f7f7f7;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  opacity: 0.7;
+  transition: ease-in-out 0.4s;
+}
+
+/* INPUT DE HORAS */
+input[type="time"] {
+  width: 50%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f7f7f7;
+  border-radius: 5px;
+}
+
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="email"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f7f7f7;
+  border-radius: 5px;
+}
+
+input[type="text"],
+input[name="estados"] {
+  display: block;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f7f7f7;
+  border-radius: 5px;
+}
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[name="estados"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+:focus {
+  background-color: #ddd;
+  outline: none;
+  border-radius: 5px;
+}
+
+.col-esquerda {
+  float: left;
+  width: 45%;
+}
+
+.col-direita {
+  float: right;
+  width: 45%;
+}
+.contatos {
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+}
+
+.menu a {
+  float: left;
+  font-size: 16px;
+  min-width: 90px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.active {
+  background: #2c3e50;
+}
+
+.menu-nav {
+  float: left;
+  overflow: hidden;
+}
+
+.menu-nav .nav-btn {
+  cursor: pointer;
+  min-width: 120px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  transition: all 0.5s;
+}
+
+.menu a:hover,
+.menu-nav:hover .nav-btn {
+  background-color: #2c3e50;
+}
+
+.menu-alt {
+  display: none;
+  position: absolute;
+  background-color: #2c3e50;
+  z-index: 1;
+}
+
+.menu-alt a {
+  min-width: 90px;
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.menu-alt a:hover {
+  background-color: #eee;
+  color: #000;
+}
+
+.menu-nav:hover .menu-alt {
+  display: block;
+}
+
+/* CHECKBOX */
+
+.checkbox-custom,
+.radio-custom {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-custom,
+.checkbox-custom-label,
+.radio-custom,
+.radio-custom-label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.checkbox-custom-label,
+.radio-custom-label {
+  position: relative;
+}
+
+.checkbox-custom + .checkbox-custom-label:before,
+.radio-custom + .radio-custom-label:before {
+  content: "";
+  background: #fff;
+  border: 2px solid #289dd2;
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  padding: 2px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.checkbox-custom:checked + .checkbox-custom-label:before {
+  background: #7ac74f;
+}
+
+.radio-custom + .radio-custom-label:before {
+  border-radius: 50%;
+}
+
+.radio-custom:checked + .radio-custom-label:before {
+  background: #7ac74f;
+}
+
+.checkbox-custom:focus + .checkbox-custom-label,
+.radio-custom:focus + .radio-custom-label {
+  outline: 1px solid #ddd;
+}
+
+/* RODAPÉ */
+
+.footer {
+  width: 100%;
+  height: 30px;
+  bottom: 0px;
+  background-color: #184358;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footer p {
+  color: #41c1ba;
+  text-align: center;
+  font-size: 0.6vw;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #eaeaeb;
+  text-decoration: underline;
+}
