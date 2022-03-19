@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Traveller: Cadastro de Ponto Turístico</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="">
+        <img src="./images/traveller-logo.png" alt="Logo Traveller" />
+      </a>
+    </div>
+    <div class="menu">
+      <a class="active" href="#">Cadastrar Novo Ponto</a>
+      <div class="menu-nav">
+        <button class="nav-btn">Pontos Nacionais</button>
+        <div class="menu-alt">
+          <a href="#">Norte</a>
+          <a href="#">Nordeste</a>
+          <a href="#">Centro Oeste</a>
+          <a href="#">Sudeste</a>
+          <a href="#">Sul</a>
+        </div>
+      </div>
+      <div class="menu-nav">
+        <button class="nav-btn">Pontos Internacionais</button>
+        <div class="menu-alt">
+          <a href="#">África</a>
+          <a href="#">Américas</a>
+          <a href="#">Ásia</a>
+          <a href="#">Europa</a>
+          <a href="#">Oceania</a>
+          <a href="#">Oriente Médio</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="flex-container">
+    <div>
+      <h1>Cadastro de Ponto Turístico</h1>
+      <p>Conheceu um lugar legal e quer contar para todo mundo?
+        <br />
+        Cadastre ele aqui e compartilhe sua experiência com outros viajantes
+      </p>
+
+      <!-- Início do Form -->
+      <form action="" name="atracoes" method="post">
+        <!-- Cadastro Coluna Esquerda -->
+        <section>
+          <div class="col-esquerda">
+            <label for="nome">Nome do Local</label>
+            <input type="text" name="nome" id="nome" required placeholder="Praia de Copacabana..." />
+            <label class="file " for="file">Clique aqui para enviar fotos do local</label>
+            <input class="file" type="file" name="file" id="file" required />
+            <label for="detalhes">Descrição</label>
+            <textarea name="detalhes" id="detalhes" cols="30" rows="10" required
+              placeholder="Digite os pontos legais, dicas e qualquer informação que achar útil :)"></textarea>
+          </div>
+
+          <div class="col-direita">
+            <label for="endereco">Endereço <span class="req">*</span></label>
+            <input type="text" name="endereco" id="endereco" required placeholder="Rua / Av. / Travessa">
+
+            <label for="numero">Número <span class="req">*</span></label>
+            <input type="number" name="numero" id="numero" required placeholder="Número">
+
+            <label for="bairro">Bairro <span class="req">*</span></label>
+            <input type="text" name="bairro" id="bairro" required placeholder="Bairro">
+
+            <label for="referencia">Ponto de Referência</label>
+            <input type="text" name="referencia" id="referencia" placeholder="Ex.: Próximo à praia do Tombo">
+          </div>
+
+          <div class="col-esquerda">
+            <label for="cep">CEP <span class="req">*</span></label>
+            <input type="number" id="cep" required placeholder="00000-000">
+
+            <label for="uf">Selecione o Estado <span class="req">*</span></label>
+            <input name="estados" list="uf" id="estados" required placeholder="Selecione o estado">
+            <datalist id="uf">
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+              <option value="EX">Estrangeiro</option>
+            </datalist>
+
+            <label for="cidade">Cidade <span class="req">*</span>
+            </label>
+            <input type="text" name="cidade" id="cidade" required placeholder="São Paulo">
+          </div>
+        </section>
+
+        <hr />
+
+        <section>
+          <h2>Contatos</h2>
+          <div class="col-esquerda">
+            <label for="tel">Telefone</label>
+            <br>
+            <input type="tel" name="telefone" id="tel" required placeholder="(00) 0000-0000">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="contato@exemplo.com">
+
+            <label for="website">Site</label>
+            <input type="url" name="email" id="email" placeholder="https://fiap.com.br">
+          </div>
+          <div class="col-direita">
+
+            <label for="cel">Celular</label>
+            <input type="tel" name="celular" id="cel" required placeholder="(00) 00000-0000">
+
+            <label for="social">Rede Social</label>
+            <input type="url" name="email" id="email" placeholder="Instagram, Facebook, Tiktok...">
+          </div>
+        </section>
+
+        <hr />
+
+        <section>
+          <h2>E quais horários podemos ir</h2>
+          <div class="col-esquerda">
+            <label for="segunda">Segunda-Feira</label>
+            <input type="time" name="segunda" id="segunda">
+
+            <label for="terca">Terça-Feira</label>
+            <input type="time" name="terca" id="terca">
+
+            <label for="quarta">Quarta-Feira</label>
+            <input type="time" name="quarta" id="quarta">
+
+            <label for="quinta">Quinta-Feira</label>
+            <input type="time" name="quinta" id="quinta">
+          </div>
+          <div class="col-direita">
+            <label for="sexta">Sexta-Feira</label>
+            <input type="time" name="sexta" id="sexta">
+
+            <label for="sabado">Sábado</label>
+            <input type="time" name="sabado" id="sabado">
+
+            <label for="domingo">Domingo</label>
+            <input type="time" name="domingo" id="domingo">
+
+            <div>
+              <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox">
+              <label for="checkbox-1" class="checkbox-custom-label">24 horas?</label>
+            </div>
+          </div>
+        </section>
+
+        <hr />
+
+        <section>
+          <h2>Marque os diferenciais e as comodidades</h2>
+          <div class="col-esquerda">
+            <div>
+              <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox">
+              <label for="checkbox-1" class="checkbox-custom-label">Acessível para PCD</label>
+            </div>
+            <div>
+              <input id="checkbox-2" class="checkbox-custom" name="checkbox-1" type="checkbox">
+              <label for="checkbox-2" class="checkbox-custom-label">Estacionamento</label>
+            </div>
+            <div>
+              <input id="checkbox-3" class="checkbox-custom" name="checkbox-1" type="checkbox">
+              <label for="checkbox-3" class="checkbox-custom-label">Pet Friendly</label>
+            </div>
+          </div>
+          <div class="col-direita">
+            <div>
+              <input id="checkbox-4" class="checkbox-custom" name="checkbox-1" type="checkbox">
+              <label for="checkbox-4" class="checkbox-custom-label">Gay Friendly</label>
+            </div>
+            <div>
+              <input id="checkbox-5" class="checkbox-custom" name="checkbox-1" type="checkbox">
+              <label for="checkbox-5" class="checkbox-custom-label">Wi-Fi Gratuito</label>
+            </div>
+            <div>
+              <input id="checkbox-6" class="checkbox-custom" name="checkbox-1" type="checkbox">
+              <label for="checkbox-6" class="checkbox-custom-label">Espaço ao ar livre</label>
+            </div>
+          </div>
+        </section>
+
+        <hr />
+
+        <section>
+          <h2>Pode nos falar sobre valores?</h2>
+          <div class="col-esquerda">
+            <p>A entrada é...</p>
+            <div>
+              <input id="radio-1" class="radio-custom" name="radio-group" type="radio">
+              <label for="radio-1" class="radio-custom-label">Paga</label>
+            </div>
+            <div>
+              <input id="radio-2" class="radio-custom" name="radio-group" type="radio">
+              <label for="radio-2" class="radio-custom-label">Gratuito</label>
+            </div>
+          </div>
+
+          <div class="col-esquerda">
+            <p>Valor da Entrada</p>
+            <input type="text" name="ingresso" id="ingresso" placeholder="R$ 10.00">
+          </div>
+        </section>
+
+        <section>
+          <div class="col-esquerda">
+            <p>Formas de Pagamento</p>
+            <div>
+              <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox">
+              <label for="checkbox-1" class="checkbox-custom-label">PIX</label>
+            </div>
+            <div>
+              <input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox">
+              <label for="checkbox-2" class="checkbox-custom-label">Dinheiro</label>
+            </div>
+            <div>
+              <input id="checkbox-3" class="checkbox-custom" name="checkbox-3" type="checkbox">
+              <label for="checkbox-3" class="checkbox-custom-label">Crédito/Débito</label>
+            </div>
+          </div>
+        </section>
+
+        <!-- Enviar Form -->
+        <section>
+          <div class="enviar">
+            <input type="submit" value="Enviar">
+          </div>
+        </section>
+      </form>
+    </div>
+  </div>
+  <!-- Rodapé -->
+  <div class="footer">
+    <p>Criado por
+      <a rel="ugc" target="_blank" href="https://github.com/amdsantos">Amanda Santos</a>
+      |
+      <a rel="ugc" target="_blank" href="https://github.com/crismantovani">Cristina Mantovani</a>
+    </p>
+  </div>
+  </div>
+</body>
+
+</html>
