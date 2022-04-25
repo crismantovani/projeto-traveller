@@ -5,12 +5,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Traveller é o melhor lugar na internet para localizar pontos turísticos, spas, praias, hotéis, restaurantes, eventos e tudo de mais importante para qualquer turista no mundo." />
+  <meta name="description"
+    content="Traveller é o melhor lugar na internet para localizar pontos turísticos, spas, praias, hotéis, restaurantes, eventos e tudo de mais importante para qualquer turista no mundo." />
   <link rel="stylesheet" href="style.css">
   <title>Traveller: Cadastro de Ponto Turístico</title>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 </head>
 
 <body>
+  <!-- INÍCIO PLUGIN VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <!-- FIM PLUGIN VLibras -->
+
   <header class="header">
     <div class="logo">
       <a href="#">
@@ -19,9 +34,9 @@
       </a>
     </div>
     <div class="menu">
-      <a class="active" href="#">Cadastrar Novo Ponto</a>
+      <a class="active" href="#">Cadastrar Ponto Turístico</a>
       <div class="menu-nav">
-        <button class="nav-btn">Pontos Nacionais</button>
+        <button class="nav-btn">Pontos Turísticos Nacionais</button>
         <div class="menu-alt">
           <a href="#">Norte</a>
           <a href="#">Nordeste</a>
@@ -31,7 +46,7 @@
         </div>
       </div>
       <div class="menu-nav">
-        <button class="nav-btn">Pontos Internacionais</button>
+        <button class="nav-btn">Pontos Turísticos Internacionais</button>
         <div class="menu-alt">
           <a href="#">África</a>
           <a href="#">Américas</a>
@@ -47,7 +62,7 @@
   <div class="flex-container">
     <div>
       <h1>Cadastro de Ponto Turístico</h1>
-      <p>Conheceu um lugar legal e quer contar para todo mundo?
+      <p class="m-10">Conheceu um lugar legal e quer contar para todo mundo?
         <br />
         Cadastre ele aqui e compartilhe sua experiência com outros viajantes
       </p>
@@ -58,28 +73,12 @@
         <div class="col-esquerda">
           <label for="nome">Nome do Local <span class="req">*</span></label>
           <input type="text" name="nome" id="nome" required placeholder="Praia de Copacabana..." />
-          <label class="file " for="file">Clique aqui para anexar fotos do local</label>
+          <label class="file " for="file">Clique para anexar fotos do local</label>
           <input class="file" type="file" name="file" id="file" required />
           <label for="detalhes">Descrição</label>
           <textarea name="detalhes" id="detalhes" cols="30" rows="10" required
             placeholder="Digite os pontos legais, dicas e qualquer informação que achar útil :)"></textarea>
-        </div>
 
-        <div class="col-direita">
-          <label for="endereco">Endereço <span class="req">*</span></label>
-          <input type="text" name="endereco" id="endereco" required placeholder="Rua / Av. / Travessa">
-
-          <label for="numero">Número <span class="req">*</span></label>
-          <input type="number" name="numero" id="numero" required placeholder="Número">
-
-          <label for="bairro">Bairro <span class="req">*</span></label>
-          <input type="text" name="bairro" id="bairro" required placeholder="Bairro">
-
-          <label for="referencia">Ponto de Referência</label>
-          <input type="text" name="referencia" id="referencia" placeholder="Ex.: Próximo à praia do Tombo">
-        </div>
-
-        <div class="col-esquerda">
           <label for="cep">CEP <span class="req">*</span></label>
           <input type="number" id="cep" required placeholder="00000-000">
 
@@ -121,13 +120,25 @@
           <input type="text" name="cidade" id="cidade" required placeholder="São Paulo">
         </div>
 
-        <hr />
+        <div class="col-direita">
+          <label for="endereco">Endereço <span class="req">*</span></label>
+          <input type="text" name="endereco" id="endereco" required placeholder="Rua / Av. / Travessa">
 
+          <label for="numero">Número <span class="req">*</span></label>
+          <input type="number" name="numero" id="numero" required placeholder="Número">
+
+          <label for="bairro">Bairro <span class="req">*</span></label>
+          <input type="text" name="bairro" id="bairro" required placeholder="Bairro">
+
+          <label for="referencia">Ponto de Referência</label>
+          <input type="text" name="referencia" id="referencia" placeholder="Ex.: Próximo à praia do Tombo">
+        </div>
+
+        <hr />
         <section>
           <h2>Contatos</h2>
           <div class="col-esquerda">
             <label for="tel">Telefone</label>
-            <br>
             <input type="tel" name="telefone" id="tel" required placeholder="(00) 0000-0000">
             <label for="email">E-mail</label>
             <input type="email" name="email" id="email" placeholder="contato@exemplo.com">
@@ -135,8 +146,8 @@
             <label for="website">Site</label>
             <input type="url" name="website" id="website" placeholder="https://fiap.com.br">
           </div>
-          <div class="col-direita">
 
+          <div class="col-direita">
             <label for="cel">Celular</label>
             <input type="tel" name="cel" id="cel" required placeholder="(00) 00000-0000">
 
@@ -242,16 +253,6 @@
                 <label for="gratuito" class="radio-custom-label">Gratuita</label>
               </div>
             </fieldset>
-          </div>
-
-          <div class="col-direita">
-            <div>
-              <label for="ingresso">Valor da Entrada</label>
-              <input type="text" name="ingresso" id="ingresso" placeholder="R$ 10.00">
-            </div>
-          </div>
-
-          <div class="col-esquerda">
             <fieldset>
               <legend>Formas de Pagamento</legend>
               <div>
@@ -267,6 +268,13 @@
                 <label for="cartao" class="checkbox-custom-label">Crédito/Débito</label>
               </div>
             </fieldset>
+          </div>
+
+          <div class="col-direita">
+            <div>
+              <label for="ingresso">Valor da Entrada</label>
+              <input type="text" name="ingresso" id="ingresso" placeholder="R$ 10.00">
+            </div>
           </div>
         </section>
 
@@ -285,8 +293,7 @@
       <a rel="ugc" target="_blank" href="https://github.com/crismantovani">Cristina
         Mantovani</a>
       |
-      <a rel="ugc" target="_blank" href="https://github.com/laiscamille">Laís Camille Alves
-        Lima</a>
+      <a rel="ugc" target="_blank" href="https://github.com/laiscamille">Laís Camille</a>
     </p>
   </div>
   <!-- Final Rodapé -->

@@ -29,7 +29,9 @@ body {
   background: #fff;
   border: 2px solid #365b6d;
   border-radius: 10px;
-  padding: 8px;
+  padding: 20px;
+  width: 720px;
+  height: auto;
 }
 
 .header .logo {
@@ -56,11 +58,11 @@ textarea {
 }
 
 h1 {
-  font-size: 2vw;
+  font-size: 1.875rem;
 }
 
 h2 {
-  font-size: 1vw;
+  font-size: 1.25rem;
 }
 
 span.req {
@@ -171,13 +173,17 @@ input[type="url"]:focus,
 .col-esquerda {
   float: left;
   width: 45%;
-  margin-top: 3vh;
+  margin-top: 20px;
 }
 
 .col-direita {
   float: right;
   width: 45%;
-  margin-top: 3vh;
+  margin-top: 20px;
+}
+
+.m-10 {
+  margin-top: 10px;
 }
 
 fieldset {
@@ -335,7 +341,7 @@ fieldset {
 .footer p {
   color: #41c1ba;
   text-align: center;
-  font-size: 1.5vw;
+  font-size: 0.938rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
