@@ -51,75 +51,73 @@
       </p>
 
       <!-- Início do Form -->
-      <form action="" name="atracoes" method="post">
+      <form name="formulario" method="post">
         <!-- Cadastro Coluna Esquerda -->
-        <section>
-          <div class="col-esquerda">
-            <label for="nome">Nome do Local</label>
-            <input type="text" name="nome" id="nome" required placeholder="Praia de Copacabana..." />
-            <label class="file " for="file">Clique aqui para anexar fotos do local</label>
-            <input class="file" type="file" name="file" id="file" required />
-            <label for="detalhes">Descrição</label>
-            <textarea name="detalhes" id="detalhes" cols="30" rows="10" required
-              placeholder="Digite os pontos legais, dicas e qualquer informação que achar útil :)"></textarea>
-          </div>
+        <div class="col-esquerda">
+          <label for="nome">Nome do Local <span class="req">*</span></label>
+          <input type="text" name="nome" id="nome" required placeholder="Praia de Copacabana..." />
+          <label class="file " for="file">Clique aqui para anexar fotos do local</label>
+          <input class="file" type="file" name="file" id="file" required />
+          <label for="detalhes">Descrição</label>
+          <textarea name="detalhes" id="detalhes" cols="30" rows="10" required
+            placeholder="Digite os pontos legais, dicas e qualquer informação que achar útil :)"></textarea>
+        </div>
 
-          <div class="col-direita">
-            <label for="endereco">Endereço <span class="req">*</span></label>
-            <input type="text" name="endereco" id="endereco" required placeholder="Rua / Av. / Travessa">
+        <div class="col-direita">
+          <label for="endereco">Endereço <span class="req">*</span></label>
+          <input type="text" name="endereco" id="endereco" required placeholder="Rua / Av. / Travessa">
 
-            <label for="numero">Número <span class="req">*</span></label>
-            <input type="number" name="numero" id="numero" required placeholder="Número">
+          <label for="numero">Número <span class="req">*</span></label>
+          <input type="number" name="numero" id="numero" required placeholder="Número">
 
-            <label for="bairro">Bairro <span class="req">*</span></label>
-            <input type="text" name="bairro" id="bairro" required placeholder="Bairro">
+          <label for="bairro">Bairro <span class="req">*</span></label>
+          <input type="text" name="bairro" id="bairro" required placeholder="Bairro">
 
-            <label for="referencia">Ponto de Referência</label>
-            <input type="text" name="referencia" id="referencia" placeholder="Ex.: Próximo à praia do Tombo">
-          </div>
+          <label for="referencia">Ponto de Referência</label>
+          <input type="text" name="referencia" id="referencia" placeholder="Ex.: Próximo à praia do Tombo">
+        </div>
 
-          <div class="col-esquerda">
-            <label for="cep">CEP <span class="req">*</span></label>
-            <input type="number" id="cep" required placeholder="00000-000">
+        <div class="col-esquerda">
+          <label for="cep">CEP <span class="req">*</span></label>
+          <input type="number" id="cep" required placeholder="00000-000">
 
-            <label for="uf">Selecione o Estado <span class="req">*</span></label>
-            <input name="estados" list="uf" id="estados" required placeholder="Selecione o estado">
-            <datalist id="uf">
-              <option value="AC">Acre</option>
-              <option value="AL">Alagoas</option>
-              <option value="AP">Amapá</option>
-              <option value="AM">Amazonas</option>
-              <option value="BA">Bahia</option>
-              <option value="CE">Ceará</option>
-              <option value="DF">Distrito Federal</option>
-              <option value="ES">Espírito Santo</option>
-              <option value="GO">Goiás</option>
-              <option value="MA">Maranhão</option>
-              <option value="MT">Mato Grosso</option>
-              <option value="MS">Mato Grosso do Sul</option>
-              <option value="MG">Minas Gerais</option>
-              <option value="PA">Pará</option>
-              <option value="PB">Paraíba</option>
-              <option value="PR">Paraná</option>
-              <option value="PE">Pernambuco</option>
-              <option value="PI">Piauí</option>
-              <option value="RJ">Rio de Janeiro</option>
-              <option value="RN">Rio Grande do Norte</option>
-              <option value="RS">Rio Grande do Sul</option>
-              <option value="RO">Rondônia</option>
-              <option value="RR">Roraima</option>
-              <option value="SC">Santa Catarina</option>
-              <option value="SP">São Paulo</option>
-              <option value="SE">Sergipe</option>
-              <option value="TO">Tocantins</option>
-              <option value="EX">Estrangeiro</option>
-            </datalist>
+          <label for="uf">Selecione o Estado <span class="req">*</span></label>
+          <input name="estados" list="uf" id="estados" required placeholder="Selecione o estado">
+          <datalist id="uf">
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+            <option value="EX">Estrangeiro</option>
+          </datalist>
 
-            <label for="cidade">Cidade <span class="req">*</span>
-            </label>
-            <input type="text" name="cidade" id="cidade" required placeholder="São Paulo">
-          </div>
-        </section>
+          <label for="cidade">Cidade <span class="req">*</span>
+          </label>
+          <input type="text" name="cidade" id="cidade" required placeholder="São Paulo">
+        </div>
 
         <hr />
 
@@ -173,8 +171,25 @@
             <input type="time" name="domingo" id="domingo">
 
             <div>
-              <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox">
-              <label for="checkbox-1" class="checkbox-custom-label">24 horas?</label>
+              <p>Aberto 24 horas?</p>
+              <div>
+                <input 
+                  type="radio" 
+                  id="sim" 
+                  name="horario" 
+                  class="radio-custom"
+                >
+                <label for="sim" class="radio-custom-label">Sim</label>
+              </div>
+              <div>
+                <input 
+                  type="radio" 
+                  id="nao" 
+                  name="horario" 
+                  class="radio-custom"
+                >
+                <label for="nao" class="radio-custom-label">Não</label>
+              </div>
             </div>
           </div>
         </section>
@@ -185,11 +200,11 @@
           <h2>Marque os diferenciais e as comodidades</h2>
           <div class="col-esquerda">
             <div>
-              <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox">
-              <label for="checkbox-1" class="checkbox-custom-label">Acessível para PCD</label>
+              <input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox">
+              <label for="checkbox-2" class="checkbox-custom-label">Acessível para PCD</label>
             </div>
             <div>
-              <input id="checkbox-2" class="checkbox-custom" name="checkbox-1" type="checkbox">
+              <input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox">
               <label for="checkbox-2" class="checkbox-custom-label">Estacionamento</label>
             </div>
             <div>
@@ -220,12 +235,22 @@
           <div class="col-esquerda">
             <p>A entrada é...</p>
             <div>
-              <input id="radio-1" class="radio-custom" name="radio-group" type="radio">
-              <label for="radio-1" class="radio-custom-label">Paga</label>
+              <input
+                type="radio" 
+                id="paga"
+                name="custo-entrada"
+                class="radio-custom"
+              >
+              <label for="paga" class="radio-custom-label">Paga</label>
             </div>
             <div>
-              <input id="radio-2" class="radio-custom" name="radio-group" type="radio">
-              <label for="radio-2" class="radio-custom-label">Gratuito</label>
+              <input
+                type="radio" 
+                id="gratuito"
+                name="custo-entrada"
+                class="radio-custom"
+              >
+              <label for="gratuito" class="radio-custom-label">Gratuito</label>
             </div>
           </div>
 
@@ -269,7 +294,6 @@
       |
       <a rel="ugc" target="_blank" href="https://github.com/crismantovani">Cristina Mantovani</a>
     </p>
-  </div>
   </div>
 </body>
 
