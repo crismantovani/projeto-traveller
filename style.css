@@ -146,7 +146,7 @@ input[type="email"] {
 }
 
 input[type="text"],
-input[name="estados"] {
+input[id="uf"] {
   display: block;
   flex-direction: column;
   width: 100%;
