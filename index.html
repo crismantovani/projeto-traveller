@@ -82,8 +82,8 @@
           <label for="cep">CEP <span class="req">*</span></label>
           <input type="number" id="cep" required placeholder="00000-000">
 
-          <label for="estados">Selecione o Estado <span class="req">*</span></label>
-          <input list="ufs" list="uf" id="uf" required placeholder="Selecione o estado">
+          <label for="ufs">Selecione o Estado <span class="req">*</span></label>
+          <input list="ufs" id="uf" required placeholder="Selecione o estado">
           <datalist id="ufs">
             <option value="AC">Acre</option>
             <option value="AL">Alagoas</option>
@@ -171,8 +171,8 @@
             <label for="domingo">Domingo</label>
             <input type="time" name="domingo" id="domingo">
 
-            <div>
-              <p>Aberto 24 horas?</p>
+            <fieldset>
+              <legend>Aberto 24 horas?</legend>
               <div>
                 <input type="radio" id="sim" name="horario" class="radio-custom">
                 <label for="sim" class="radio-custom-label">Sim</label>
@@ -181,7 +181,7 @@
                 <input type="radio" id="nao" name="horario" class="radio-custom">
                 <label for="nao" class="radio-custom-label">Não</label>
               </div>
-            </div>
+            </fieldset>
           </div>
         </section>
 
@@ -190,32 +190,39 @@
         <section>
           <h2>Marque os diferenciais e as comodidades</h2>
           <div class="col-esquerda">
-            <div>
-              <input type="checkbox" id="pcd" name="comodidades" class="checkbox-custom">
-              <label for="pcd" class="checkbox-custom-label">Acessível para PCD</label>
-            </div>
-            <div>
-              <input type="checkbox" id="estacionamento" name="comodidades" class="checkbox-custom">
-              <label for="estacionamento" class="checkbox-custom-label">Estacionamento</label>
-            </div>
-            <div>
-              <input type="checkbox" id="pet-friendly" name="comodidades" class="checkbox-custom">
-              <label for="pet-friendly" class="checkbox-custom-label">Pet Friendly</label>
-            </div>
+            <fieldset>
+              <legend>Diferenciais</legend>
+              <div>
+                <input type="checkbox" id="pcd" name="comodidades" class="checkbox-custom">
+                <label for="pcd" class="checkbox-custom-label">Acessível para PCD</label>
+              </div>
+              <div>
+                <input type="checkbox" id="gay-friendly" name="comodidades" class="checkbox-custom">
+                <label for="gay-friendly" class="checkbox-custom-label">Gay Friendly</label>
+              </div>
+              <div>
+                <input type="checkbox" id="pet-friendly" name="comodidades" class="checkbox-custom">
+                <label for="pet-friendly" class="checkbox-custom-label">Pet Friendly</label>
+              </div>
+              <fieldset>
           </div>
+
           <div class="col-direita">
-            <div>
-              <input type="checkbox" id="gay-friendly" name="comodidades" class="checkbox-custom">
-              <label for="gay-friendly" class="checkbox-custom-label">Gay Friendly</label>
-            </div>
-            <div>
-              <input type="checkbox" id="wifi" name="comodidades" class="checkbox-custom">
-              <label for="wifi" class="checkbox-custom-label">Wi-Fi Gratuito</label>
-            </div>
-            <div>
-              <input type="checkbox" id="ar-livre" name="comodidades" class="checkbox-custom">
-              <label for="ar-livre" class="checkbox-custom-label">Espaço ao ar livre</label>
-            </div>
+            <fieldset>
+              <legend>Comodidades</legend>
+              <div>
+                <input type="checkbox" id="estacionamento" name="comodidades" class="checkbox-custom">
+                <label for="estacionamento" class="checkbox-custom-label">Estacionamento</label>
+              </div>
+              <div>
+                <input type="checkbox" id="wifi" name="comodidades" class="checkbox-custom">
+                <label for="wifi" class="checkbox-custom-label">Wi-Fi Gratuito</label>
+              </div>
+              <div>
+                <input type="checkbox" id="ar-livre" name="comodidades" class="checkbox-custom">
+                <label for="ar-livre" class="checkbox-custom-label">Espaço ao ar livre</label>
+              </div>
+            </fieldset>
           </div>
         </section>
 
@@ -224,56 +231,59 @@
         <section>
           <h2>Pode nos falar sobre valores?</h2>
           <div class="col-esquerda">
-            <p>A entrada é...</p>
+            <fieldset>
+              <legend>A entrada é...</legend>
+              <div>
+                <input type="radio" id="paga" name="custo-entrada" class="radio-custom">
+                <label for="paga" class="radio-custom-label">Paga</label>
+
+                <input type="radio" id="gratuito" name="custo-entrada" class="radio-custom">
+                <label for="gratuito" class="radio-custom-label">Gratuita</label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="col-direita">
             <div>
-              <input type="radio" id="paga" name="custo-entrada" class="radio-custom">
-              <label for="paga" class="radio-custom-label">Paga</label>
-            </div>
-            <div>
-              <input type="radio" id="gratuito" name="custo-entrada" class="radio-custom">
-              <label for="gratuito" class="radio-custom-label">Gratuito</label>
+              <label for="ingresso">Valor da Entrada</label>
+              <input type="text" name="ingresso" id="ingresso" placeholder="R$ 10.00">
             </div>
           </div>
 
           <div class="col-esquerda">
-            <p>Valor da Entrada</p>
-            <input type="text" name="ingresso" id="ingresso" placeholder="R$ 10.00">
-          </div>
-        </section>
-
-        <section>
-          <div class="col-esquerda">
-            <p>Formas de Pagamento</p>
-            <div>
-              <input type="checkbox" id="pix" name="pagamentos" class="checkbox-custom">
-              <label for="pix" class="checkbox-custom-label">PIX</label>
-            </div>
-            <div>
-              <input type="checkbox" id="dinheiro" name="pagamentos" class="checkbox-custom">
-              <label for="dinheiro" class="checkbox-custom-label">Dinheiro</label>
-            </div>
-            <div>
-              <input type="checkbox" id="cartao" name="pagamentos" class="checkbox-custom">
-              <label for="cartao" class="checkbox-custom-label">Crédito/Débito</label>
-            </div>
+            <fieldset>
+              <legend>Formas de Pagamento</legend>
+              <div>
+                <input type="checkbox" id="pix" name="pagamentos" class="checkbox-custom">
+                <label for="pix" class="checkbox-custom-label">PIX</label>
+              </div>
+              <div>
+                <input type="checkbox" id="dinheiro" name="pagamentos" class="checkbox-custom">
+                <label for="dinheiro" class="checkbox-custom-label">Dinheiro</label>
+              </div>
+              <div>
+                <input type="checkbox" id="cartao" name="pagamentos" class="checkbox-custom">
+                <label for="cartao" class="checkbox-custom-label">Crédito/Débito</label>
+              </div>
+            </fieldset>
           </div>
         </section>
 
         <!-- Enviar Form -->
-        <section>
-          <div class="enviar">
-            <input type="submit" class="btn" value="Enviar">
-          </div>
-        </section>
+        <div class="enviar">
+          <input type="submit" class="btn" value="Enviar">
+        </div>
       </form>
     </div>
   </div>
   <!-- Rodapé -->
   <div class="footer">
     <p>Criado por
-      <a rel="ugc" target="_blank" href="https://github.com/amdsantos">Amanda Santos</a>
+      <a rel="ugc" target="_blank" href="https://github.com/amdsantos" alt="GitHub Amanda Santos">Amanda Santos</a>
       |
-      <a rel="ugc" target="_blank" href="https://github.com/crismantovani">Cristina Mantovani</a>
+      <a rel="ugc" target="_blank" href="https://github.com/crismantovani" alt="GitHub Cristina Mantovani">Cristina Mantovani</a>
+      |
+      <a rel="ugc" target="_blank" href="https://github.com/laiscamille" alt="GitHub Laís Lima">Laís Camille Alves Lima</a>
     </p>
   </div>
 </body>
