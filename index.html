@@ -82,8 +82,8 @@
           <label for="cep">CEP <span class="req">*</span></label>
           <input type="number" id="cep" required placeholder="00000-000">
 
-          <label for="estados">Selecione o Estado <span class="req">*</span></label>
-          <input list="ufs" list="uf" id="uf" required placeholder="Selecione o estado">
+          <label for="ufs">Selecione o Estado <span class="req">*</span></label>
+          <input list="ufs" id="uf" required placeholder="Selecione o estado">
           <datalist id="ufs">
             <option value="AC">Acre</option>
             <option value="AL">Alagoas</option>
@@ -239,9 +239,7 @@
             <p>Valor da Entrada</p>
             <input type="text" name="ingresso" id="ingresso" placeholder="R$ 10.00">
           </div>
-        </section>
 
-        <section>
           <div class="col-esquerda">
             <p>Formas de Pagamento</p>
             <div>
@@ -260,11 +258,9 @@
         </section>
 
         <!-- Enviar Form -->
-        <section>
-          <div class="enviar">
-            <input type="submit" class="btn" value="Enviar">
-          </div>
-        </section>
+        <div class="enviar">
+          <input type="submit" class="btn" value="Enviar">
+        </div>
       </form>
     </div>
   </div>
