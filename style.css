@@ -171,11 +171,13 @@ input[type="url"]:focus,
 .col-esquerda {
   float: left;
   width: 45%;
+  margin-top: 3vh;
 }
 
 .col-direita {
   float: right;
   width: 45%;
+  margin-top: 3vh;
 }
 .contatos {
   display: flex;
