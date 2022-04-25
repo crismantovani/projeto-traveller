@@ -13,7 +13,8 @@
   <header class="header">
     <div class="logo">
       <a href="">
-        <img src="./images/traveller-logo.png" alt="Desenho do planeta Terra com um avião, ambos nas cores verde, simulando uma volta ao redor do mundo. Com um ícone de GPS na cor azul no topo. A palavra 'Traveller - Hello World' está escrita abaixo do globo, na cor azul marinho." />
+        <img src="./images/traveller-logo.png"
+          alt="Desenho do planeta Terra com um avião, ambos nas cores verde, simulando uma volta ao redor do mundo. Com um ícone de GPS na cor azul no topo. A palavra 'Traveller - Hello World' está escrita abaixo do globo, na cor azul marinho." />
       </a>
     </div>
     <div class="menu">
@@ -81,9 +82,9 @@
           <label for="cep">CEP <span class="req">*</span></label>
           <input type="number" id="cep" required placeholder="00000-000">
 
-          <label for="uf">Selecione o Estado <span class="req">*</span></label>
-          <input name="estados" list="uf" id="uf" required placeholder="Selecione o estado">
-          <datalist id="uf">
+          <label for="estados">Selecione o Estado <span class="req">*</span></label>
+          <input list="ufs" list="uf" id="uf" required placeholder="Selecione o estado">
+          <datalist id="ufs">
             <option value="AC">Acre</option>
             <option value="AL">Alagoas</option>
             <option value="AP">Amapá</option>
@@ -173,21 +174,11 @@
             <div>
               <p>Aberto 24 horas?</p>
               <div>
-                <input 
-                  type="radio" 
-                  id="sim" 
-                  name="horario" 
-                  class="radio-custom"
-                >
+                <input type="radio" id="sim" name="horario" class="radio-custom">
                 <label for="sim" class="radio-custom-label">Sim</label>
               </div>
               <div>
-                <input 
-                  type="radio" 
-                  id="nao" 
-                  name="horario" 
-                  class="radio-custom"
-                >
+                <input type="radio" id="nao" name="horario" class="radio-custom">
                 <label for="nao" class="radio-custom-label">Não</label>
               </div>
             </div>
@@ -200,12 +191,7 @@
           <h2>Marque os diferenciais e as comodidades</h2>
           <div class="col-esquerda">
             <div>
-              <input 
-                type="checkbox"
-                id="pcd" 
-                name="comodidades"
-                class="checkbox-custom" 
-              >
+              <input type="checkbox" id="pcd" name="comodidades" class="checkbox-custom">
               <label for="pcd" class="checkbox-custom-label">Acessível para PCD</label>
             </div>
             <div>
@@ -240,21 +226,11 @@
           <div class="col-esquerda">
             <p>A entrada é...</p>
             <div>
-              <input
-                type="radio" 
-                id="paga"
-                name="custo-entrada"
-                class="radio-custom"
-              >
+              <input type="radio" id="paga" name="custo-entrada" class="radio-custom">
               <label for="paga" class="radio-custom-label">Paga</label>
             </div>
             <div>
-              <input
-                type="radio" 
-                id="gratuito"
-                name="custo-entrada"
-                class="radio-custom"
-              >
+              <input type="radio" id="gratuito" name="custo-entrada" class="radio-custom">
               <label for="gratuito" class="radio-custom-label">Gratuito</label>
             </div>
           </div>
