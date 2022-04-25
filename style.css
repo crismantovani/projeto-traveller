@@ -343,11 +343,19 @@ fieldset {
 }
 
 .footer a {
-  color: #fff;
+  color: #eaeaeb;
   text-decoration: none;
+  line-height: 1;
+  transition: 500ms linear;
+  opacity: 0.7;
 }
 
 .footer a:hover {
-  color: #eaeaeb;
+  color: #fff;
   text-decoration: underline;
+  opacity: 1;
+}
+
+.footer a:focus {
+  outline: thin dotted;
 }

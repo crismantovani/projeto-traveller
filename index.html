@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Traveller é o melhor lugar na internet para localizar pontos turísticos, spas, praias, hotéis, restaurantes, eventos e tudo de mais importante para qualquer turista no mundo." />
   <link rel="stylesheet" href="style.css">
   <title>Traveller: Cadastro de Ponto Turístico</title>
 </head>
@@ -12,9 +13,9 @@
 <body>
   <header class="header">
     <div class="logo">
-      <a href="">
+      <a href="#">
         <img src="./images/traveller-logo.png"
-          alt="Desenho do planeta Terra com um avião, ambos nas cores verde, simulando uma volta ao redor do mundo. Com um ícone de GPS na cor azul no topo. A palavra 'Traveller - Hello World' está escrita abaixo do globo, na cor azul marinho." />
+          alt="Desenho do planeta Terra com um avião, ambos de cor verde, simulando uma volta ao redor do mundo. Há um ícone de GPS na cor azul no topo. A palavra 'Traveller - Hello World' está escrita abaixo do globo, na cor azul marinho." />
       </a>
     </div>
     <div class="menu">
@@ -82,7 +83,7 @@
           <label for="cep">CEP <span class="req">*</span></label>
           <input type="number" id="cep" required placeholder="00000-000">
 
-          <label for="ufs">Selecione o Estado <span class="req">*</span></label>
+          <label for="uf">Selecione o Estado <span class="req">*</span></label>
           <input list="ufs" id="uf" required placeholder="Selecione o estado">
           <datalist id="ufs">
             <option value="AC">Acre</option>
@@ -204,7 +205,7 @@
                 <input type="checkbox" id="pet-friendly" name="comodidades" class="checkbox-custom">
                 <label for="pet-friendly" class="checkbox-custom-label">Pet Friendly</label>
               </div>
-              <fieldset>
+            </fieldset>
           </div>
 
           <div class="col-direita">
@@ -273,19 +274,22 @@
         <div class="enviar">
           <input type="submit" class="btn" value="Enviar">
         </div>
-      </form>
+      </form> <!-- Final Form -->
     </div>
   </div>
-  <!-- Rodapé -->
+  <!-- Início Rodapé -->
   <div class="footer">
     <p>Criado por
-      <a rel="ugc" target="_blank" href="https://github.com/amdsantos" alt="GitHub Amanda Santos">Amanda Santos</a>
+      <a rel="ugc" target="_blank" href="https://github.com/amdsantos">Amanda Santos</a>
       |
-      <a rel="ugc" target="_blank" href="https://github.com/crismantovani" alt="GitHub Cristina Mantovani">Cristina Mantovani</a>
+      <a rel="ugc" target="_blank" href="https://github.com/crismantovani">Cristina
+        Mantovani</a>
       |
-      <a rel="ugc" target="_blank" href="https://github.com/laiscamille" alt="GitHub Laís Lima">Laís Camille Alves Lima</a>
+      <a rel="ugc" target="_blank" href="https://github.com/laiscamille">Laís Camille Alves
+        Lima</a>
     </p>
   </div>
+  <!-- Final Rodapé -->
 </body>
 
 </html>
